@@ -14,15 +14,22 @@ public class AddTest {
     @Test
     public void givenEmptyString_whenAdd_thenReturnZero(){
 
-       int result = StringCalculator.add("");
+       int result = StringCalculator.add(new String[] {""});
        assertThat(result).isEqualTo(0);
     }
 
     @Test
     public void givenOneNumber_whenAdd_thenReturnSum(){
 
-        int result = StringCalculator.add("1");
+        int result = StringCalculator.add(new String[]{"1"});
         assertThat(result).isEqualTo(1);
+    }
+
+    @Test
+    public void givenTwoNumbers_whenAdd_thenReturnSum(){
+
+        int result = StringCalculator.add(new String[]{"2", "3"});
+        assertThat(result).isEqualTo(5);
     }
 
 

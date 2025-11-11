@@ -11,11 +11,7 @@ public class StringCalculator {
         Iterator<String> inputIterator = Arrays.stream(input).iterator();
         while (inputIterator.hasNext()) {
             String current = inputIterator.next();
-            if (current.isEmpty()) {
-                result += 0;
-            } else {
-                result += Integer.parseInt(current);
-            }
+            result += current.isEmpty() ? 0 : Integer.parseInt(current);
         }
         return result;
     }

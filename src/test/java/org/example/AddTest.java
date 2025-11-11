@@ -41,4 +41,11 @@ public class AddTest {
         int result = StringCalculator.add("4\n2,5");
         assertThat(result).isEqualTo(11);
     }
+
+    @Test
+    public void givenInputWithCustomDelimiter_whenAdd_thenReturnSum(){
+
+        int result = StringCalculator.add("//;\n1;2");
+        assertThat(result).isEqualTo(3);
+    }
 }

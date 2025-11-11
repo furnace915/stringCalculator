@@ -1,6 +1,11 @@
+import org.assertj.core.api.Assertions;
 import org.example.StringCalculator;
-import org.junit.jupiter.api.Assertions;
+
+
+
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AddTest {
 
@@ -8,7 +13,7 @@ public class AddTest {
     public void givenEmptyString_whenAdd_thenReturnZero(){
 
        int result = StringCalculator.add("");
-       Assertions.assertEquals(0,result);
+       assertThat(result).isEqualTo(0);
     }
 
 

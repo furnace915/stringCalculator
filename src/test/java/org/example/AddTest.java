@@ -34,4 +34,11 @@ public class AddTest {
         int result = StringCalculator.add("4,14,7,101");
         assertThat(result).isEqualTo(126);
     }
+
+    @Test
+    public void givenInputSeparatedByNewLineCharacter_whenAdd_thenReturnSum(){
+
+        int result = StringCalculator.add("4\n2,5");
+        assertThat(result).isEqualTo(11);
+    }
 }

@@ -8,7 +8,7 @@ public class StringCalculator {
 
         int result = 0;
 
-        Iterator<String> inputIterator = Arrays.stream(input.split(",")).iterator();
+        Iterator<String> inputIterator = Arrays.stream(input.split("\\D+")).iterator();
         while (inputIterator.hasNext()) {
             String current = inputIterator.next();
             result += current.isEmpty() ? 0 : Integer.parseInt(current);

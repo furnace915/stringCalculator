@@ -16,5 +16,13 @@ public class AddTest {
        assertThat(result).isEqualTo(0);
     }
 
+    @Test
+    public void givenOneNumber_whenAdd_thenReturnSum(){
+
+        int result = StringCalculator.add("1");
+        assertThat(result).isEqualTo(1);
+    }
+
+
 
 }

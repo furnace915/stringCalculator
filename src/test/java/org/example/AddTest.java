@@ -1,5 +1,6 @@
 package org.example;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -23,17 +24,14 @@ public class AddTest {
     @Test
     public void givenTwoNumbers_whenAdd_thenReturnSum(){
 
-        int result = StringCalculator.add("2","3");
+        int result = StringCalculator.add("2,3");
         assertThat(result).isEqualTo(5);
     }
 
     @Test
     public void givenMoreThanTwoNumbers_whenAdd_thenReturnSum(){
 
-        int result = StringCalculator.add("4","14","7","101");
+        int result = StringCalculator.add("4,14,7,101");
         assertThat(result).isEqualTo(126);
     }
-
-
-
 }
